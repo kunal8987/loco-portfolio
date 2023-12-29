@@ -10,12 +10,12 @@ import Projects from "./pages/projects/Projects";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Home /> */}
-      {/* <Skills /> */}
+      <Navbar />
+      <Home />
+      <Skills />
       <Projects />
-      {/* <Github /> */}
-      {/* <Footer /> */}
+      <Github />
+      <Footer />
     </>
   );
 }
