@@ -3,13 +3,12 @@ import skills from "./data.json";
 const Skills = () => {
   return (
     <>
-      <div className="bg-stone-300">
-        <div className="text-2xl text-center font-bold p-8 text-gray-900 md:text-5xl">
-        <span className="border-b-4 border-black">Skills</span>
-          
+      <div id="skills" className="bg-stone-300 py-12">
+        <div className="text-3xl text-center font-bold p-8 text-gray-900 md:text-5xl">
+          <span className="border-b-4 border-black">Skills</span>
         </div>
 
-        <div className="grid gap-6 gap-y-10 py-6 md:grid-cols-2 lg:grid-cols-5 ">
+        <div className="grid gap-6 grid-cols-2 gap-y-10 py-6 md:grid-cols-3 lg:grid-cols-5 ">
           {skills.map((post) => (
             <div key={post.name} className="border-2 border-black rounded-xl">
               <img

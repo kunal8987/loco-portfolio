@@ -2,8 +2,8 @@ import React from "react";
 
 const Github = () => {
   return (
-    <div  className="bg-stone-300">
-      <div className="text-2xl text-center font-bold p-10 text-gray-900 md:text-5xl">
+    <div id="github" className="bg-stone-300 py-12">
+      <div className="text-3xl text-center font-bold p-10 text-gray-900 md:text-5xl">
       <span className="border-b-4 border-black">Github</span>
       </div>
 

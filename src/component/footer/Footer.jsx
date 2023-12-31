@@ -1,18 +1,20 @@
 import React from "react";
-import { Linkedin, Github , Mail,Twitter } from "lucide-react";
+import { Linkedin, Github, Mail, Twitter } from "lucide-react";
 const Footer = () => {
   return (
-    <section className="relative overflow-hidden bg-stone-300 py-10">
+    <section
+      id="contacts"
+      className="relative overflow-hidden bg-stone-300 py-12"
+    >
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-center">
           <div className="w-auto p-8">
             <div className="mb-[100px]">
-              <div className="text-2xl text-center font-bold text-gray-900 md:text-5xl">
-              <span className="border-b-4 border-black">Connect With Me</span>
-                
+              <div className="text-3xl text-center font-bold text-gray-900 md:text-5xl">
+                <span className="border-b-4 border-black">Connect With Me</span>
               </div>
             </div>
-            <ul className="-m-5 flex flex-wrap items-center">
+            <ul className="-m-5 flex flex-wrap justify-center align-middle items-center">
               <li className="p-5">
                 <a
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
@@ -30,7 +32,7 @@ const Footer = () => {
                   href="#"
                 >
                   <span className="px-3">
-                  <Twitter />
+                    <Twitter />
                   </span>
                   Twitter
                 </a>
@@ -41,7 +43,7 @@ const Footer = () => {
                   href="#"
                 >
                   <span className="px-3">
-                  <Github />
+                    <Github />
                   </span>
                   GitHub
                 </a>
@@ -51,8 +53,8 @@ const Footer = () => {
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
                   href="#"
                 >
-                   <span className="px-3">
-                   <Mail />
+                  <span className="px-3">
+                    <Mail />
                   </span>
                   Email
                 </a>

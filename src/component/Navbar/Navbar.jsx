@@ -1,10 +1,10 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
-import Profile from '../../assets/Kunal.JPG'
+import Profile from "../../assets/Kunal.JPG";
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    href: "#home",
   },
   {
     name: "About",
@@ -12,19 +12,19 @@ const menuItems = [
   },
   {
     name: "Projects",
-    href: "#",
+    href: "#projects",
   },
   {
     name: "Skills",
-    href: "#",
+    href: "#skills",
   },
   {
     name: "Git",
-    href: "#",
+    href: "#github",
   },
   {
     name: "Contacts",
-    href: "#",
+    href: "#contacts",
   },
 ];
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="relative w-full bg-stone-300">
+    <div className=" fixed top-0 w-full bg-stone-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -62,13 +62,12 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div
-          className="hidden lg:block">
+        <div className="hidden lg:block ">
           <button
             type="button"
             className="rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Button text
+            Resume
           </button>
         </div>
         <div className="lg:hidden">
@@ -76,7 +75,7 @@ const Navbar = () => {
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 ">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
@@ -121,7 +120,7 @@ const Navbar = () => {
                   type="button"
                   className="mt-4 w-full rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
-                  Button text
+                  Resume
                 </button>
               </div>
             </div>
