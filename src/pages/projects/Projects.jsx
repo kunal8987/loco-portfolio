@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Zee5 from "../../assets/Zee5.png";
 import urban from "../../assets/urban company.png";
 import Crystara from "../../assets/Crystara.png";
 import job from "../../assets/Job finder.png";
+import AOS from "aos";
+
+import "aos/dist/aos.css";
 const Project = [
   {
     id: 1,
@@ -43,6 +46,9 @@ const Project = [
   },
 ];
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <div id="projects" className="bg-stone-300 py-12">
       <div className="text-3xl text-center font-bold p-10 text-gray-900 md:text-5xl">
@@ -50,7 +56,7 @@ const Projects = () => {
       </div>
       <div className="grid grid-cols-1 gap-10 gap-y-10 py-2 md:grid-cols-2 lg:grid-cols-3">
         {Project.map((post) => (
-          <div key={post.id} className="border-2 border-black rounded-xl">
+          <div data-aos="zoom-in-up" key={post.id} className="border-2 border-black rounded-xl">
             <img
               src={post.src}
               className="aspect-video object-contain border p-3 object-top w-full"

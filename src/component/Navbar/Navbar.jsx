@@ -1,40 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Profile from "../../assets/Kunal.JPG";
+import AOS from "aos";
+import { Link } from "react-scroll";
+import "aos/dist/aos.css";
 const menuItems = [
   {
     name: "Home",
-    href: "#home",
+    href: "home",
   },
   {
     name: "About",
-    href: "#",
+    href: "about",
+  },
+
+  {
+    name: "Skills",
+    href: "skills",
   },
   {
     name: "Projects",
-    href: "#projects",
-  },
-  {
-    name: "Skills",
-    href: "#skills",
+    href: "projects",
   },
   {
     name: "Git",
-    href: "#github",
+    href: "github",
   },
   {
     name: "Contacts",
-    href: "#contacts",
+    href: "contacts",
   },
 ];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className=" fixed top-0 w-full bg-stone-300">
+    <div data-aos="fade-down" className=" fixed top-0 z-20 w-full bg-stone-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -52,12 +58,15 @@ const Navbar = () => {
           <ul className="inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className=" font-semibold text-xl text-gray-800 hover:text-gray-900"
+                <Link
+                  to={item.href}
+                  smooth={true}
+                  offset={-30}
+                  duration={1500}
+                  className=" font-semibold text-xl text-gray-800 hover:text-gray-900 cursor-pointer"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -104,21 +113,24 @@ const Navbar = () => {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                        to={item.href}
+                        smooth={true}
+                        offset={-30}
+                        duration={1500}
+                        className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold cursor-pointer hover:bg-gray-50"
                       >
                         <span className="ml-3 font-medium text-xl text-gray-900">
                           {item.name}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
                 <button
                   type="button"
-                  className="mt-4 w-full rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  className="mt-4 w-full rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black "
                 >
                   Resume
                 </button>
