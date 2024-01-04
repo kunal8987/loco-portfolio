@@ -18,7 +18,8 @@ const Footer = () => {
               <li className="p-5">
                 <a
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
-                  href="#"
+                  href="https://www.linkedin.com/in/kunal-deotale-976b10246/"
+                  target="_blank"
                 >
                   <span className="px-3">
                     <Linkedin />
@@ -30,6 +31,7 @@ const Footer = () => {
                 <a
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
                   href="#"
+                  targrt="_blank"
                 >
                   <span className="px-3">
                     <Twitter />
@@ -40,7 +42,8 @@ const Footer = () => {
               <li className="p-5">
                 <a
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
-                  href="#"
+                  href="https://github.com/kunal8987"
+                  target="_blank"
                 >
                   <span className="px-3">
                     <Github />
@@ -51,7 +54,7 @@ const Footer = () => {
               <li className="p-5">
                 <a
                   className="font-medium text-xl flex text-gray-600 hover:text-gray-700"
-                  href="#"
+                  href="mailto:kdeotale4@gmail.com"
                 >
                   <span className="px-3">
                     <Mail />

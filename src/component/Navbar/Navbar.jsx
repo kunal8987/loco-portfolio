@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import Profile from "../../assets/Kunal.JPG";
 import AOS from "aos";
 import { Link } from "react-scroll";
+import Resume from "../../assets/Kunal_Deotale_Resume.pdf";
 import "aos/dist/aos.css";
 const menuItems = [
   {
@@ -76,7 +77,17 @@ const Navbar = () => {
             type="button"
             className="rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Resume
+            <a
+              href={Resume}
+              download
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1_JOQXfdN6AQCsgg8m1R4i2M66Z3mvRhe/view?usp=drive_link"
+                )
+              }
+            >
+              Resume
+            </a>
           </button>
         </div>
         <div className="lg:hidden">
@@ -132,7 +143,17 @@ const Navbar = () => {
                   type="button"
                   className="mt-4 w-full rounded-md bg-black px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black "
                 >
-                  Resume
+                  <a
+                    href={Resume}
+                    download
+                    onClick={() =>
+                      window.open(
+                        "https://drive.google.com/file/d/1_JOQXfdN6AQCsgg8m1R4i2M66Z3mvRhe/view?usp=drive_link"
+                      )
+                    }
+                  >
+                    Resume
+                  </a>
                 </button>
               </div>
             </div>

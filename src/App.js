@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/footer/Footer";
@@ -13,7 +12,7 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <About/>
+      <About />
       <Skills />
       <Projects />
       <Github />
